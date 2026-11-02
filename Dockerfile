@@ -3,7 +3,7 @@ FROM public.ecr.aws/docker/library/openjdk:22-ea-17-slim-bookworm
 ENV JAVA_OPTS="-Xmx512m -Xms256m -Djava.security.egd=file:/dev/./urandom" \
     SPRING_PROFILES_ACTIVE=prod
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl=7.88.1-10+deb12u14 tzdata=2025b-0+deb12u2 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends curl=7.88.1-10+deb12u15 tzdata=2026f-0+deb12u1 && rm -rf /var/lib/apt/lists/*
 
 USER nobody:nogroup
 WORKDIR /app
